@@ -906,7 +906,11 @@ function xhprof_param_init($params) {
     }
 
     if ($k === 'run') {
-      //$p = implode(',', array_filter(explode(',', $p), 'ctype_xdigit'));
+      $p = implode(',', array_filter(explode(',', $p), 'ctype_xdigit'));
+    }
+
+    if ($k == 'symbol') {
+        $p = strip_tags($p);
     }
 
     // create a global variable using the parameter name.
