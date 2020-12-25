@@ -39,3 +39,9 @@ require __DIR__ .'/../../xhprof-custem/auto_prepend_xhprof.php';
 // 如有需要，可以先备份原文件
 /xhprof-custem/xhprof/xhprof_lib/utils/xhprof_lib.php
 ```
+
+xhprof安装调试参考：
+
+```
+https://www.showdoc.com.cn/p/971ec56990de0edb7cbd511a073afea2
+```
