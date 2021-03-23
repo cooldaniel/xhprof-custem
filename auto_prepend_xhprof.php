@@ -7,7 +7,18 @@ xhprof_enable(XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_CPU);
 register_shutdown_function(function() {
 
     $xhprof_data = xhprof_disable();
-	
+
+//    \D::logc(array_sum(array_column($xhprof_data, 'ct')), $xhprof_data);
+//    \D::log($xhprof_data["main()"]);
+//    \D::log($xhprof_data["main()"]['wt']);
+    if ($xhprof_data["main()"]['wt'] < 2*1000*1000) {
+        return;
+    }
+
+//    if (!$xhprof_data["main()"]['mu'] && !$xhprof_data["main()"]['pmu']) {
+//        return;
+//    }
+
 	require_once __DIR__.'/../xhprof/xhprof_lib/utils/xhprof_lib.php';
     require_once __DIR__.'/../xhprof/xhprof_lib/utils/xhprof_runs.php';
 
