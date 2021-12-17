@@ -35,9 +35,9 @@ register_shutdown_function(function() {
 //    \D::logc(array_sum(array_column($xhprof_data, 'ct')), $xhprof_data);
 //    \D::log($xhprof_data["main()"]);
 //    \D::log($xhprof_data["main()"]['wt']);
-//    if ($xhprof_data["main()"]['wt'] < 2*1000*1000) {
-//        return;
-//    }
+    if ($xhprof_data["main()"]['wt'] < 2*1000*1000) {
+        return;
+    }
 
 //    if (!$xhprof_data["main()"]['mu'] && !$xhprof_data["main()"]['pmu']) {
 //        return;
