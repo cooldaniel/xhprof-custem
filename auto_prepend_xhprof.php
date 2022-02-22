@@ -61,7 +61,7 @@ register_shutdown_function(function() {
         $num = $xhprof_data["main()"]['wt'];
         $num = $num / 1000;
         $num = $num / 1000;
-        $run_id = substr($url, 0, 150) . '-' .  uniqid() . '-----' . $num . '-----';
+        $run_id = substr($url, 0, 150) . '-' .  uniqid();
         
         //file_put_contents('/var/xhprof/dd.txt', $run_id."\n", FILE_APPEND);
     }else{
